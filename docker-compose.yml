@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+
+  # Our Nestjs Backend
+  api: 
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+      # Only build development stage from Dockerfile
+      target: development
+    # Mount our host dir to the docker container
+    # Mount api directory (./api) to (:) docker container (/thomas/src/app)
+    # Reflect File changes from host to container
+    volumes:
+      - ./api:/api
+      - /api/node_modules/
+    container_name: api_c
+    command: npm run start:debug
+    ports:
+      - 3000:3000
+      - 9229:9229
+
+  # Our Angular Frontend
+  frontend:
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+      target: development
+    container_name: frontend_c
+    ports:
+      - '4200:4200'
+    # stdin_open: true
+    # tty: true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run start
+
+  # Our Mongodb Database for NestJS to connect to
+  mongodb:
+      image: mongo:latest
+      environment:
+        - MONGODB_DATABASE="test"
+      ports:
+        - 27017:27017
+
+
+# 91 121 3505 Dilmurod
