@@ -18,7 +18,5 @@ jobs:
     - name: Start containers
       uses: isbang/compose-action@v1.4.1
       with:
-        compose-file: "./home/admin/web/hujjat.ferpi.uz/first_test/docker-compose.yml"
-        services: |
-          docker compose up
-
+        compose-file: "/home/admin/web/hujjat.ferpi.uz/first_test/docker-compose.yml"
+        down-flags: "--volumes"
