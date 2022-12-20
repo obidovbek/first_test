@@ -6,3 +6,6 @@ Bu o‘zgarish windowsda qilindi
 change degree 2
 
 change degree 3
+
+change degree 4
+
