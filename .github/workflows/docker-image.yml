@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start containers
+      uses: isbang/compose-action@v1.4.1
+      with:
+        compose-file: "./home/admin/web/hujjat.ferpi.uz/first_test/docker-compose.yml"
+
