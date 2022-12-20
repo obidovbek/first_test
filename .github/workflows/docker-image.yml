@@ -15,4 +15,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Start containers
-      run: docker-compose -f "/home/admin/web/hujjat.ferpi.uz/first_test/docker-compose.yml" up -d --build
+      uses: isbang/compose-action@v1.4.1
+      with:
+        compose-file: "./home/admin/web/hujjat.ferpi.uz/first_test/docker-compose.yml"
+
