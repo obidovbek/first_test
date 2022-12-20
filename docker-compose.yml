@@ -2,11 +2,6 @@ version: "3.8"
 
 services:
 
-  git:
-    image: git_sample_app_docker_compose:1.0
-    container_name: git_sample_app_docker_compose
-    command: git -C ./home/admin/web/hujjat.ferpi.uz/test_first/ pull
-
   # Our Nestjs Backend
   api: 
     build:
