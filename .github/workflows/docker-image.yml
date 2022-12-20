@@ -15,5 +15,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       
+    - name: git
+      run: git pull
+      
     - name: Run docker compose
-      run: docker compose up -d
+      run: docker compose restart
