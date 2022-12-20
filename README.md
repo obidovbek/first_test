@@ -3,7 +3,7 @@ Birinchi test proyekt
 
 Bu o‘zgarish windowsda qilindi
 
-change degree 9
+change degree 10
 
 
 
