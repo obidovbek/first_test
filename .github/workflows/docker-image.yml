@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Copy all files to repository
-      run : cp -rf . /home/admin/web/hujjat.ferpi.uz/sec_test/
+      run : cp -rf . /home/admin/web/hujjat.ferpi.uz/first_test/
       
 #    - name: Create zip deployment package 
 #      run : zip -r zip_file.zip ./ -x *.git*
