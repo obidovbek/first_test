@@ -14,6 +14,9 @@ jobs:
     
     - name: Checkout
       uses: actions/checkout@v1
+      
+    - name: Create zip deployment package 
+      run : zip -r zip_file ./ -x *.git*
     
     - name: List current folder
       run: ls -la
