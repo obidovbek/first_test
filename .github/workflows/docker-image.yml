@@ -24,8 +24,8 @@ jobs:
 #    - name: Copy zip folder
 #      run :  cp -i zip_file.zip /home/admin/web/
     
-    - name: List current folder
-      run: ls -la
+#    - name: List current folder
+#      run: ls -la
       
     - name: Run docker compose
       run: docker compose restart
