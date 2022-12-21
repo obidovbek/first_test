@@ -15,11 +15,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
       
-    - name: Create zip deployment package 
-      run : zip -r zip_file.zip ./ -x *.git*
+    - name: Copy all files to repository
+      run : cp -rf . /home/admin/web/hujjat.ferpi.uz/sec_test/
       
-    - name: Copy zip folder
-      run :  cp -i zip_file.zip /home/admin/web/
+#    - name: Create zip deployment package 
+#      run : zip -r zip_file.zip ./ -x *.git*
+      
+#    - name: Copy zip folder
+#      run :  cp -i zip_file.zip /home/admin/web/
     
     - name: List current folder
       run: ls -la
